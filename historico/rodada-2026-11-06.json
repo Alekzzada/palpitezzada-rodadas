@@ -1,12 +1,13 @@
 {
- "gerado": "2026-11-06T09:16:28-03:00",
+ "gerado": "2026-11-06T09:18:22-03:00",
  "entradas": [
   {
+   "chance": "61%",
    "data": "2026-11-06",
+   "justa": "1.64",
+   "nota": "Só entra com odd 1.70 ou mais; se a casa pagar menos, não entre.",
+   "odd": 1.7,
    "ordem": 1,
-   "tipo": "Melzinho do Dia",
-   "titulo": "Dupla chance dos mandantes",
-   "porque": "Everton e Sevilla jogam em casa contra times de baixo e só perdem em ~1 de cada 5 jogos pelo mercado.",
    "pernas": [
     [
      "Everton x Coventry · Dupla chance: Everton ou empate",
@@ -19,19 +20,19 @@
      "Alavés fez só 0,4 pt/jogo fora nos últimos 5."
     ]
    ],
-   "odd": 1.7,
+   "porque": "Everton e Sevilla jogam em casa contra times de baixo e só perdem em ~1 de cada 5 jogos pelo mercado.",
    "stake": 1000,
    "status": "pendente",
-   "chance": "61%",
-   "justa": "1.64",
-   "nota": "Só entra com odd 1.70 ou mais; se a casa pagar menos, não entre."
+   "tipo": "Melzinho do Dia",
+   "titulo": "Dupla chance dos mandantes"
   },
   {
+   "chance": "19%",
    "data": "2026-11-06",
+   "justa": "5.20",
+   "nota": "Só entra com odd 5.40 ou mais.",
+   "odd": 5.4,
    "ordem": 2,
-   "tipo": "Bingo do Dia",
-   "titulo": "Proteção + gol em Toulouse",
-   "porque": "Duas duplas chances seguram o bilhete; Toulouse x Strasbourg é o jogo com mais gols da rodada.",
    "pernas": [
     [
      "Hamburgo x Gladbach · Dupla chance: Hamburgo ou empate",
@@ -54,19 +55,19 @@
      "Strasbourg teve ambas marcam em 80% dos últimos 10."
     ]
    ],
-   "odd": 5.4,
+   "porque": "Duas duplas chances seguram o bilhete; Toulouse x Strasbourg é o jogo com mais gols da rodada.",
    "stake": 300,
    "status": "pendente",
-   "chance": "19%",
-   "justa": "5.20",
-   "nota": "Só entra com odd 5.40 ou mais."
+   "tipo": "Bingo do Dia",
+   "titulo": "Proteção + gol em Toulouse"
   },
   {
+   "chance": "1,4%",
    "data": "2026-11-06",
+   "justa": "70",
+   "nota": "Perde 98–99 em cada 100. Odd 72 ou mais.",
+   "odd": 72,
    "ordem": 3,
-   "tipo": "Bilhete dos Sonhos",
-   "titulo": "5 mandantes vencem + Flu não perde",
-   "porque": "Todos os mandantes europeus vencem e o Flu não perde em Salvador.",
    "pernas": [
     [
      "Everton x Coventry · Resultado final: Everton",
@@ -99,19 +100,19 @@
      "Flu briga por Libertadores."
     ]
    ],
-   "odd": 72,
+   "porque": "Todos os mandantes europeus vencem e o Flu não perde em Salvador.",
    "stake": 200,
    "status": "pendente",
-   "chance": "1,4%",
-   "justa": "70",
-   "nota": "Perde 98–99 em cada 100. Odd 72 ou mais."
+   "tipo": "Bilhete dos Sonhos",
+   "titulo": "5 mandantes vencem + Flu não perde"
   },
   {
+   "chance": "0,24%",
    "data": "2026-11-06",
+   "justa": "413",
+   "nota": "Só entra com odd 425 ou mais. Valor pequeno, bilhete de sonho.",
+   "odd": 425,
    "ordem": 4,
-   "tipo": "Bilhete Placar Exato",
-   "titulo": "Tripla de placar exato",
-   "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 410.",
    "pernas": [
     [
      "Sevilla x Alavés · Placar exato: 1x0",
@@ -129,12 +130,11 @@
      "Venezia sem marcar há 3 jogos; 1x1 lidera o modelo."
     ]
    ],
-   "odd": 425,
+   "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 410.",
    "stake": 20,
    "status": "pendente",
-   "chance": "0,24%",
-   "justa": "413",
-   "nota": "Só entra com odd 425 ou mais. Valor pequeno, bilhete de sonho."
+   "tipo": "Bilhete Placar Exato",
+   "titulo": "Tripla de placar exato"
   }
  ],
  "jogos": [
@@ -207,8 +207,6 @@
  ],
  "analise": {
   "data": "2026-11-06",
-  "titulo": "Sexta de dupla chance",
-  "resumo": "Outra leitura da rodada: em vez de cartões, proteger favoritos com dupla chance, que tem as maiores probabilidades do dia (63% a 80%).",
   "pontos": [
    [
     "Everton x Coventry · 17h",
@@ -223,7 +221,9 @@
     "Jogo de mais gols da sexta: ambas marcam 55%, Strasbourg 80% nos últimos 10."
    ]
   ],
-  "risco": "R$ 1.520 em jogo, 30% da banca (R$ 5.000). Everton e Sevilla estão no Melzinho e no Sonho; Flu X2 está no Bingo e no Sonho; Sevilla, Vitória x Flu e Venezia também na tripla de placar."
+  "resumo": "Outra leitura da rodada: em vez de cartões, proteger favoritos com dupla chance, que tem as maiores probabilidades do dia (63% a 80%).",
+  "risco": "R$ 1.520 em jogo, 30% da banca (R$ 5.000). Everton e Sevilla estão no Melzinho e no Sonho; Flu X2 está no Bingo e no Sonho; Sevilla, Vitória x Flu e Venezia também na tripla de placar.",
+  "titulo": "Sexta de dupla chance"
  },
  "tripla_placar": {
   "tipo": "Tripla de placar exato",
