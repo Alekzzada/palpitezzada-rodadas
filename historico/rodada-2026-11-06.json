@@ -135,6 +135,37 @@
    "status": "pendente",
    "tipo": "Bilhete Placar Exato",
    "titulo": "Tripla de placar exato"
+  },
+  {
+   "chance": "3,5%",
+   "data": "2026-11-06",
+   "justa": "28.6",
+   "nota": "Só entra com odd 30 ou mais. Acerta ~1 em 29. Valor de sonho, fora do Melzinho e do Bingo.",
+   "odd": 30,
+   "ordem": 5,
+   "pernas": [
+    [
+     "Everton x Coventry · Everton vence sem sofrer gol",
+     "30,5%",
+     "Coventry sofre muito fora e marca pouco; 1x0 e 2x0 estão entre os placares mais prováveis."
+    ],
+    [
+     "Operário-PR x Sport · Total de gols: menos de 2.5",
+     "60,9%",
+     "Confronto direto de reta final da Série B; nenhum dos dois pode perder."
+    ],
+    [
+     "Vitória x Fluminense · Fluminense vence e ambas marcam",
+     "18,9%",
+     "Flu sem Ignácio, Millán e Martinelli; Vitória em casa e pressionado deve marcar."
+    ]
+   ],
+   "porque": "Uma perna em cada jogo, sem repetir mercado de gols; odd 30 com a maior chance possível na rodada.",
+   "stake": 500,
+   "status": "pendente",
+   "tipo": "Múltipla Odd 30+",
+   "titulo": "Everton sem sofrer + Série B travada + Flu vence com gols",
+   "id": "2026-11-06-odd30"
   }
  ],
  "jogos": [
@@ -194,6 +225,17 @@
    "Alavés é o time mais faltoso; +3.5 cartões ~73%."
   ],
   [
+   "19:30",
+   "Operário-PR x Sport",
+   "Brasileirão B",
+   39,
+   29,
+   32,
+   "OPE",
+   "SPT",
+   "Confronto direto pelo G-6 (51 x 55 pts); menos de 2,5 gols ~61%."
+  ],
+  [
    "20:00",
    "Vitória x Fluminense",
    "Brasileirão A",
@@ -222,7 +264,7 @@
    ]
   ],
   "resumo": "Outra leitura da rodada: em vez de cartões, proteger favoritos com dupla chance, que tem as maiores probabilidades do dia (63% a 80%).",
-  "risco": "R$ 1.520 em jogo, 30% da banca (R$ 5.000). Everton e Sevilla estão no Melzinho e no Sonho; Flu X2 está no Bingo e no Sonho; Sevilla, Vitória x Flu e Venezia também na tripla de placar.",
+  "risco": "R$ 2.020 em jogo, 40% da banca (R$ 5.000), com a Múltipla Odd 30+ de R$ 500. Everton está no Melzinho, no Sonho e na Odd 30+; Vitória x Flu aparece no Bingo, no Sonho, na tripla de placar e na Odd 30+. Se o Everton tropeçar, quatro entradas caem juntas.",
   "titulo": "Sexta de dupla chance"
  },
  "tripla_placar": {
