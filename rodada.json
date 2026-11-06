@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-06T09:18:22-03:00",
+ "gerado": "2026-11-06T09:34:27-03:00",
  "entradas": [
   {
    "chance": "61%",
@@ -24,7 +24,8 @@
    "stake": 1000,
    "status": "pendente",
    "tipo": "Melzinho do Dia",
-   "titulo": "Dupla chance dos mandantes"
+   "titulo": "Dupla chance dos mandantes",
+   "id": "2026-11-06-mel"
   },
   {
    "chance": "19%",
@@ -59,7 +60,8 @@
    "stake": 300,
    "status": "pendente",
    "tipo": "Bingo do Dia",
-   "titulo": "Proteção + gol em Toulouse"
+   "titulo": "Proteção + gol em Toulouse",
+   "id": "2026-11-06-bingo"
   },
   {
    "chance": "1,4%",
@@ -104,7 +106,8 @@
    "stake": 200,
    "status": "pendente",
    "tipo": "Bilhete dos Sonhos",
-   "titulo": "5 mandantes vencem + Flu não perde"
+   "titulo": "5 mandantes vencem + Flu não perde",
+   "id": "2026-11-06-sonho"
   },
   {
    "chance": "0,24%",
@@ -134,7 +137,8 @@
    "stake": 20,
    "status": "pendente",
    "tipo": "Bilhete Placar Exato",
-   "titulo": "Tripla de placar exato"
+   "titulo": "Tripla de placar exato",
+   "id": "2026-11-06-tripla"
   }
  ],
  "jogos": [
