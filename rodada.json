@@ -1,0 +1,263 @@
+{
+ "gerado": "2026-11-06T08:44:53-03:00",
+ "entradas": [
+  {
+   "data": "2026-11-06",
+   "ordem": 1,
+   "tipo": "Melzinho do Dia",
+   "titulo": "Dupla chance dos mandantes",
+   "porque": "Everton e Sevilla jogam em casa contra times de baixo e só perdem em ~1 de cada 5 jogos pelo mercado.",
+   "pernas": [
+    [
+     "Everton x Coventry · Dupla chance: Everton ou empate",
+     "80%",
+     "Everton fez 2,0 pts/jogo nos últimos 5 em casa; Coventry sofre 1,8 gol/jogo."
+    ],
+    [
+     "Sevilla x Alavés · Dupla chance: Sevilla ou empate",
+     "76%",
+     "Alavés fez só 0,4 pt/jogo fora nos últimos 5."
+    ]
+   ],
+   "odd": 1.7,
+   "stake": 1000,
+   "status": "pendente",
+   "chance": "61%",
+   "justa": "1.64",
+   "nota": "Só entra com odd 1.70 ou mais; se a casa pagar menos, não entre."
+  },
+  {
+   "data": "2026-11-06",
+   "ordem": 2,
+   "tipo": "Bingo do Dia",
+   "titulo": "Proteção + gol em Toulouse",
+   "porque": "Duas duplas chances seguram o bilhete; Toulouse x Strasbourg é o jogo com mais gols da rodada.",
+   "pernas": [
+    [
+     "Hamburgo x Gladbach · Dupla chance: Hamburgo ou empate",
+     "67%",
+     "Gladbach com 0,5 pt/jogo na Bundesliga."
+    ],
+    [
+     "Vitória x Fluminense · Dupla chance: empate ou Fluminense",
+     "66%",
+     "Flu 4º com 54 pts contra o 15º."
+    ],
+    [
+     "Venezia x Udinese · Total de gols: menos de 3.5",
+     "79%",
+     "Venezia sem marcar há 3 jogos."
+    ],
+    [
+     "Toulouse x Strasbourg · Ambas marcam: Sim",
+     "55%",
+     "Strasbourg teve ambas marcam em 80% dos últimos 10."
+    ]
+   ],
+   "odd": 5.4,
+   "stake": 300,
+   "status": "pendente",
+   "chance": "19%",
+   "justa": "5.20",
+   "nota": "Só entra com odd 5.40 ou mais."
+  },
+  {
+   "data": "2026-11-06",
+   "ordem": 3,
+   "tipo": "Bilhete dos Sonhos",
+   "titulo": "5 mandantes vencem + Flu não perde",
+   "porque": "Todos os mandantes europeus vencem e o Flu não perde em Salvador.",
+   "pernas": [
+    [
+     "Everton x Coventry · Resultado final: Everton",
+     "56%",
+     "Maior favorito da sexta."
+    ],
+    [
+     "Sevilla x Alavés · Resultado final: Sevilla",
+     "49%",
+     "Alavés fraco fora."
+    ],
+    [
+     "Toulouse x Strasbourg · Resultado final: Toulouse",
+     "46%",
+     "Leve favorito em casa."
+    ],
+    [
+     "Hamburgo x Gladbach · Resultado final: Hamburgo",
+     "41%",
+     "Gladbach em má fase."
+    ],
+    [
+     "Venezia x Udinese · Resultado final: Venezia",
+     "42%",
+     "Udinese com 1 ponto em 8 jogos."
+    ],
+    [
+     "Vitória x Fluminense · Dupla chance: empate ou Fluminense",
+     "66%",
+     "Flu briga por Libertadores."
+    ]
+   ],
+   "odd": 72,
+   "stake": 200,
+   "status": "pendente",
+   "chance": "1,4%",
+   "justa": "70",
+   "nota": "Perde 98–99 em cada 100. Odd 72 ou mais."
+  },
+  {
+   "data": "2026-11-06",
+   "ordem": 4,
+   "tipo": "Bilhete Placar Exato",
+   "titulo": "Tripla de placar exato",
+   "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 410.",
+   "pernas": [
+    [
+     "Sevilla x Alavés · Placar exato: 1x0",
+     "14,0%",
+     "Alavés marca pouco fora; 1x0 é o placar mais provável."
+    ],
+    [
+     "Vitória x Fluminense · Placar exato: 1x1",
+     "13,3%",
+     "Jogo equilibrado; 1x1 é o placar mais provável."
+    ],
+    [
+     "Venezia x Udinese · Placar exato: 1x1",
+     "13,0%",
+     "Venezia sem marcar há 3 jogos; 1x1 lidera o modelo."
+    ]
+   ],
+   "odd": 425,
+   "stake": 20,
+   "status": "pendente",
+   "chance": "0,24%",
+   "justa": "413",
+   "nota": "Só entra com odd 425 ou mais. Valor pequeno, bilhete de sonho."
+  }
+ ],
+ "jogos": [
+  [
+   "16:30",
+   "Hamburgo x Gladbach",
+   "Bundesliga",
+   41,
+   26,
+   33,
+   "HSV",
+   "BMG",
+   "Jogo mais aberto da noite; ambas marcam ~55%."
+  ],
+  [
+   "16:45",
+   "Venezia x Udinese",
+   "Serie A",
+   42,
+   28,
+   30,
+   "VEN",
+   "UDI",
+   "Venezia sem vencer e pressionado; jogo travado e faltoso."
+  ],
+  [
+   "16:45",
+   "Toulouse x Strasbourg",
+   "Ligue 1",
+   46,
+   25,
+   29,
+   "TFC",
+   "RCS",
+   "Toulouse leve favorito em casa."
+  ],
+  [
+   "17:00",
+   "Everton x Coventry",
+   "Premier League",
+   56,
+   24,
+   20,
+   "EVE",
+   "COV",
+   "Maior favorito da sexta, em casa contra o 17º."
+  ],
+  [
+   "17:00",
+   "Sevilla x Alavés",
+   "LaLiga",
+   49,
+   27,
+   24,
+   "SEV",
+   "ALA",
+   "Alavés é o time mais faltoso; +3.5 cartões ~73%."
+  ],
+  [
+   "20:00",
+   "Vitória x Fluminense",
+   "Brasileirão A",
+   34,
+   29,
+   37,
+   "VIT",
+   "FLU",
+   "Vitória 15º (38 pts) contra Flu 4º (54 pts); +3.5 cartões ~76%."
+  ]
+ ],
+ "analise": {
+  "data": "2026-11-06",
+  "titulo": "Sexta de dupla chance",
+  "resumo": "Outra leitura da rodada: em vez de cartões, proteger favoritos com dupla chance, que tem as maiores probabilidades do dia (63% a 80%).",
+  "pontos": [
+   [
+    "Everton x Coventry · 17h",
+    "Everton não perde em 80%; Coventry sofre 1,8 gol/jogo."
+   ],
+   [
+    "Vitória x Fluminense · 20h",
+    "Flu não perde em 66%; placar mais provável 1x1 (13%)."
+   ],
+   [
+    "Toulouse x Strasbourg · 16h45",
+    "Jogo de mais gols da sexta: ambas marcam 55%, Strasbourg 80% nos últimos 10."
+   ]
+  ],
+  "risco": "R$ 1.520 em jogo, 30% da banca (R$ 5.000). Everton e Sevilla estão no Melzinho e no Sonho; Flu X2 está no Bingo e no Sonho; Sevilla, Vitória x Flu e Venezia também na tripla de placar."
+ },
+ "tripla_placar": {
+  "tipo": "Tripla de placar exato",
+  "pernas": [
+   [
+    "Sevilla x Alavés · Placar exato: 1x0",
+    "14,0%"
+   ],
+   [
+    "Vitória x Fluminense · Placar exato: 1x1",
+    "13,3%"
+   ],
+   [
+    "Venezia x Udinese · Placar exato: 1x1",
+    "13,0%"
+   ]
+  ],
+  "chance": "0,24% (1 em ~410)",
+  "justa": "413",
+  "nota": "Só entra com odd 425+. Valor de sonho, fora da banca.",
+  "reserva": [
+   [
+    "Everton x Coventry · 1x0",
+    "12,4%"
+   ],
+   [
+    "Hamburgo x Gladbach · 1x1",
+    "12,5%"
+   ],
+   [
+    "Toulouse x Strasbourg · 1x1",
+    "11,9%"
+   ]
+  ],
+  "reserva_chance": "0,18% (1 em ~540)"
+ }
+}
