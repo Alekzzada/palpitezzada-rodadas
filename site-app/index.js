@@ -6,7 +6,9 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const PORT = process.env.PORT || 80;
+const PORT = 80; // ShardCloud exige porta 80 em 0.0.0.0
+process.on('uncaughtException', e => console.error('Erro (servidor segue no ar):', e && e.stack || e));
+process.on('unhandledRejection', e => console.error('Promessa rejeitada (servidor segue no ar):', e && e.message || e));
 const REPO = 'Alekzzada/palpitezzada-rodadas';
 const DIR = __dirname;
 const USERS_FILE = path.join(DIR, 'usuarios.json');
@@ -32,7 +34,7 @@ function confere(senha, guardado) {
 let USERS = {};
 function carregarUsuarios() {
   let lista = [];
-  try { lista = JSON.parse(fs.readFileSync(USERS_FILE, 'utf8')); } catch (e) { console.error('usuarios.json inválido ou ausente'); }
+  try { lista = JSON.parse(fs.readFileSync(USERS_FILE, 'utf8')); } catch (e) { console.error('ATENÇÃO: usuarios.json inválido ou ausente — ninguém consegue entrar até corrigir.'); }
   let mudou = false;
   for (const u of lista) if (u.senha) { u.hash = hash(String(u.senha)); delete u.senha; mudou = true; }
   if (mudou) { try { fs.writeFileSync(USERS_FILE, JSON.stringify(lista, null, 2)); } catch (e) {} }
@@ -137,7 +139,9 @@ function corpo(req) { return new Promise(ok => { let b = ''; req.on('data', c =>
 
 function https_(req) { return req.socket.encrypted || String(req.headers['x-forwarded-proto'] || '').includes('https'); }
 let ultimoPing = 0;
-http.createServer(async (req, res) => {
+http.createServer((req, res) => { rota(req, res).catch(e => { console.error('Rota:', e && e.message); try { enviar(res, 500, 'Erro interno'); } catch (x) {} }); }).listen(PORT, '0.0.0.0', () => console.log('Palpitezzada no ar em 0.0.0.0:' + PORT));
+
+async function rota(req, res) {
   const url = new URL(req.url, 'http://x');
   const p = url.pathname;
   const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
@@ -176,4 +180,4 @@ http.createServer(async (req, res) => {
   if (p === '/' || p === '/index.html') return arquivo(res, 'index.html');
   if (/^\/[\w.-]+\.(css|js|svg|png|ico)$/.test(p)) return arquivo(res, p.slice(1));
   enviar(res, 404, 'Não encontrado');
-}).listen(PORT, () => console.log('Palpitezzada no ar na porta', PORT));
+}
