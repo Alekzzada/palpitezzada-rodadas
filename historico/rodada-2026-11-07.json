@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-07T09:40:00-03:00",
+ "gerado": "2026-11-07T19:55:00-03:00",
  "banca": {
-  "atual": 6800,
-  "obs": "Banca após 06/11 (+R$ 1.800 oficiais). Se a Odd 30+ de ontem (R$ 500, vermelha) foi jogada, a banca é R$ 6.300."
+  "atual": 7380,
+  "obs": "Parcial de 07/11 às 20h: R$ 6.800 + Melzinho (+R$ 800) − Sonho (R$ 200) − Tripla (R$ 20). Bingo (R$ 300) e Premium da Noite (R$ 200) pendentes. Se o Bingo bater, banca vai a R$ 9.300 antes do Premium."
  },
  "ontem": {
   "data": "2026-11-06",
@@ -32,16 +32,18 @@
    ],
    "porque": "Os dois maiores favoritos do sábado, em jogos e horários diferentes (11h30 e 17h05), sem perna de gols.",
    "stake": 1000,
-   "status": "pendente",
+   "status": "green",
    "tipo": "Melzinho do Dia",
-   "titulo": "PSG + Bayern vencem"
+   "titulo": "PSG + Bayern vencem",
+   "lucro": 800,
+   "resultado": "PSG 1x0 Troyes · Mainz 1x2 Bayern"
   },
   {
    "id": "2026-11-07-bingo",
    "chance": "13,8%",
    "data": "2026-11-07",
    "justa": "7.2",
-   "nota": "Só entra com odd 7.40 ou mais. Acerta ~1 em 7.",
+   "nota": "AO VIVO: só falta o X2 do Juventude (~72%). Retorno R$ 2.220. Cash out justo ≈ R$ 1.600: acima disso vale mais que segurar, abaixo segurar paga mais pela conta.",
    "odd": 7.4,
    "ordem": 2,
    "pernas": [
@@ -75,7 +77,8 @@
    "stake": 300,
    "status": "pendente",
    "tipo": "Bingo do Dia",
-   "titulo": "Favoritos + X2 Juventude + gols em Leipzig"
+   "titulo": "Favoritos + X2 Juventude + gols em Leipzig",
+   "resultado": "4 de 5 verdes: Valencia 0x3 Real · Arsenal 1x0 Hull · Roma 3x0 Sassuolo · Leipzig 5x2 Augsburg. Falta Cuiabá x Juventude (20h)"
   },
   {
    "id": "2026-11-07-sonho",
@@ -86,21 +89,59 @@
    "odd": 51,
    "ordem": 3,
    "pernas": [
-    ["Paris Saint-Germain x Troyes · Resultado final: PSG", "80%", "Líder contra o 16º."],
-    ["Valencia x Real Madrid · Resultado final: Real Madrid", "72%", "Valencia sem vencer em casa."],
-    ["Mainz x Bayern · Resultado final: Bayern", "70%", "Bayern invicto."],
-    ["Arsenal x Hull City · Resultado final: Arsenal", "70%", "Líder em casa."],
-    ["Roma x Sassuolo · Resultado final: Roma", "65%", "Sassuolo com 4 derrotas seguidas."],
-    ["Borussia Dortmund x Elversberg · Resultado final: Dortmund", "64%", "BVB invicto, 6 gols sofridos em 8."],
-    ["RB Leipzig x Augsburg · Resultado final: Leipzig", "58%", "4º contra o 11º."],
-    ["Nottingham Forest x Manchester City · Resultado final: City", "57%", "Forest é o 19º, com 6 gols em 9 jogos."],
-    ["Atlético-MG x Grêmio · Resultado final: Atlético-MG", "52%", "Galo precisa vencer (perdeu a ida por 2x0) e vai pressionar desde o início."]
+    [
+     "Paris Saint-Germain x Troyes · Resultado final: PSG",
+     "80%",
+     "Líder contra o 16º."
+    ],
+    [
+     "Valencia x Real Madrid · Resultado final: Real Madrid",
+     "72%",
+     "Valencia sem vencer em casa."
+    ],
+    [
+     "Mainz x Bayern · Resultado final: Bayern",
+     "70%",
+     "Bayern invicto."
+    ],
+    [
+     "Arsenal x Hull City · Resultado final: Arsenal",
+     "70%",
+     "Líder em casa."
+    ],
+    [
+     "Roma x Sassuolo · Resultado final: Roma",
+     "65%",
+     "Sassuolo com 4 derrotas seguidas."
+    ],
+    [
+     "Borussia Dortmund x Elversberg · Resultado final: Dortmund",
+     "64%",
+     "BVB invicto, 6 gols sofridos em 8."
+    ],
+    [
+     "RB Leipzig x Augsburg · Resultado final: Leipzig",
+     "58%",
+     "4º contra o 11º."
+    ],
+    [
+     "Nottingham Forest x Manchester City · Resultado final: City",
+     "57%",
+     "Forest é o 19º, com 6 gols em 9 jogos."
+    ],
+    [
+     "Atlético-MG x Grêmio · Resultado final: Atlético-MG",
+     "52%",
+     "Galo precisa vencer (perdeu a ida por 2x0) e vai pressionar desde o início."
+    ]
    ],
    "porque": "Nove favoritos vencendo no mesmo sábado. Nenhum mandante fraco cravado (erro do Sevilla ontem).",
    "stake": 200,
-   "status": "pendente",
+   "status": "red",
    "tipo": "Bilhete dos Sonhos",
-   "titulo": "9 favoritos vencem"
+   "titulo": "9 favoritos vencem",
+   "lucro": -200,
+   "resultado": "Nottingham Forest 3x1 Manchester City (as outras 7 pernas já decididas bateram)"
   },
   {
    "id": "2026-11-07-tripla",
@@ -111,56 +152,254 @@
    "odd": 360,
    "ordem": 4,
    "pernas": [
-    ["Cuiabá x Juventude · Placar exato: 0x1", "14,9%", "Cuiabá marca pouco (33 em 36); Juventude sofre pouco."],
-    ["Vila Nova x Criciúma · Placar exato: 1x0", "14,7%", "Confronto direto do G-4; Criciúma tem só 38 gols em 36 jogos."],
-    ["Paderborn x Eintracht Frankfurt · Placar exato: 1x1", "13,3%", "Paderborn tem só 6 gols marcados e 9 sofridos em 8 jogos."]
+    [
+     "Cuiabá x Juventude · Placar exato: 0x1",
+     "14,9%",
+     "Cuiabá marca pouco (33 em 36); Juventude sofre pouco."
+    ],
+    [
+     "Vila Nova x Criciúma · Placar exato: 1x0",
+     "14,7%",
+     "Confronto direto do G-4; Criciúma tem só 38 gols em 36 jogos."
+    ],
+    [
+     "Paderborn x Eintracht Frankfurt · Placar exato: 1x1",
+     "13,3%",
+     "Paderborn tem só 6 gols marcados e 9 sofridos em 8 jogos."
+    ]
    ],
    "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 343.",
    "stake": 20,
-   "status": "pendente",
+   "status": "red",
    "tipo": "Bilhete Placar Exato",
-   "titulo": "Tripla de placar exato"
+   "titulo": "Tripla de placar exato",
+   "lucro": -20,
+   "resultado": "Paderborn 2x2 Frankfurt"
+  },
+  {
+   "id": "2026-11-07-premium",
+   "data": "2026-11-07",
+   "ordem": 5,
+   "tipo": "Premium da Noite",
+   "titulo": "Vila Nova e CRB não perdem",
+   "odd": 2.15,
+   "justa": "2.11",
+   "chance": "47%",
+   "stake": 200,
+   "status": "pendente",
+   "nota": "Só entra com odd 2.15 ou mais. Fora do Juventude de propósito, para não dobrar exposição no jogo que decide o Bingo.",
+   "porque": "Vila Nova invicto há 6 jogos em casa, com estádio lotado e melhor campanha de mandante; CRB briga pela última vaga do G6 contra um Náutico de meio de tabela sem nada em jogo.",
+   "pernas": [
+    [
+     "Vila Nova x Criciúma · Dupla chance: Vila Nova ou empate",
+     "74%",
+     "3º (63) x 4º (62). Vila tem a melhor campanha em casa da Série B e 6 jogos sem perder no OBA."
+    ],
+    [
+     "Náutico x CRB · Dupla chance: empate ou CRB",
+     "64%",
+     "CRB 6º (55) com 4 times empatados brigando pelo G6; Náutico 15º (46)."
+    ]
+   ]
   }
  ],
  "jogos": [
-  ["11:30", "Mainz x Bayern", "Bundesliga", 13, 17, 70, "M05", "FCB", "Bayern 1º invicto (27:8); Mainz 10º."],
-  ["11:30", "Dortmund x Elversberg", "Bundesliga", 64, 20, 16, "BVB", "SVE", "BVB 2º invicto, defesa de 6 gols sofridos."],
-  ["11:30", "RB Leipzig x Augsburg", "Bundesliga", 58, 22, 20, "RBL", "FCA", "Jogo de mais gols do dia; +2.5 ~62%."],
-  ["12:00", "Arsenal x Hull City", "Premier League", 70, 19, 11, "ARS", "HUL", "Líder (24 pts) contra o 11º."],
-  ["14:30", "Nottingham Forest x Manchester City", "Premier League", 20, 23, 57, "NFO", "MCI", "Forest 19º; City 2º com 20 gols."],
-  ["16:10", "Novorizontino x Fortaleza", "Brasileirão B", 47, 28, 25, "NOV", "FOR", "Líder (67) x 5º (62); Fortaleza só perdeu 6 vezes."],
-  ["16:45", "Roma x Sassuolo", "Serie A", 65, 21, 14, "ROM", "SAS", "Roma 3ª invicta; Sassuolo 4 derrotas seguidas."],
-  ["17:00", "Valencia x Real Madrid", "LaLiga", 11, 17, 72, "VAL", "RMA", "Valencia 19º, sem vitória em casa; Real sem Vini."],
-  ["17:05", "PSG x Troyes", "Ligue 1", 80, 13, 7, "PSG", "TRO", "Maior favorito do sábado."],
-  ["18:00", "Atlético-MG x Grêmio", "Copa do Brasil", 52, 27, 21, "CAM", "GRE", "Volta da semi; Grêmio venceu a ida por 2x0."],
-  ["20:00", "Vila Nova x Criciúma", "Brasileirão B", 42, 31, 27, "VIL", "CRI", "3º x 4º pelo acesso; menos de 2.5 ~60%."],
-  ["20:00", "Cuiabá x Juventude", "Brasileirão B", 32, 33, 35, "CUI", "JUV", "Juventude 2º; menos de 2.5 ~64%."]
+  [
+   "11:30",
+   "Mainz x Bayern",
+   "Bundesliga",
+   13,
+   17,
+   70,
+   "M05",
+   "FCB",
+   "FINAL 1x2 · Bayern 1º invicto (27:8); Mainz 10º."
+  ],
+  [
+   "11:30",
+   "Dortmund x Elversberg",
+   "Bundesliga",
+   64,
+   20,
+   16,
+   "BVB",
+   "SVE",
+   "FINAL 2x1 · BVB 2º invicto, defesa de 6 gols sofridos."
+  ],
+  [
+   "11:30",
+   "RB Leipzig x Augsburg",
+   "Bundesliga",
+   58,
+   22,
+   20,
+   "RBL",
+   "FCA",
+   "FINAL 5x2 · Jogo de mais gols do dia; +2.5 ~62%."
+  ],
+  [
+   "12:00",
+   "Arsenal x Hull City",
+   "Premier League",
+   70,
+   19,
+   11,
+   "ARS",
+   "HUL",
+   "FINAL 1x0 · Líder (24 pts) contra o 11º."
+  ],
+  [
+   "14:30",
+   "Nottingham Forest x Manchester City",
+   "Premier League",
+   20,
+   23,
+   57,
+   "NFO",
+   "MCI",
+   "FINAL 3x1 · Forest 19º; City 2º com 20 gols."
+  ],
+  [
+   "16:10",
+   "Novorizontino x Fortaleza",
+   "Brasileirão B",
+   47,
+   28,
+   25,
+   "NOV",
+   "FOR",
+   "Líder (67) x 5º (62); Fortaleza só perdeu 6 vezes."
+  ],
+  [
+   "16:45",
+   "Roma x Sassuolo",
+   "Serie A",
+   65,
+   21,
+   14,
+   "ROM",
+   "SAS",
+   "FINAL 3x0 · Roma 3ª invicta; Sassuolo 4 derrotas seguidas."
+  ],
+  [
+   "17:00",
+   "Valencia x Real Madrid",
+   "LaLiga",
+   11,
+   17,
+   72,
+   "VAL",
+   "RMA",
+   "FINAL 0x3 · Valencia 19º, sem vitória em casa; Real sem Vini."
+  ],
+  [
+   "17:05",
+   "PSG x Troyes",
+   "Ligue 1",
+   80,
+   13,
+   7,
+   "PSG",
+   "TRO",
+   "FINAL 1x0 · Maior favorito do sábado."
+  ],
+  [
+   "18:00",
+   "Atlético-MG x Grêmio",
+   "Copa do Brasil",
+   52,
+   27,
+   21,
+   "CAM",
+   "GRE",
+   "Volta da semi; Grêmio venceu a ida por 2x0."
+  ],
+  [
+   "20:00",
+   "Vila Nova x Criciúma",
+   "Brasileirão B",
+   44,
+   30,
+   26,
+   "VIL",
+   "CRI",
+   "3º x 4º pelo acesso; menos de 2.5 ~60%."
+  ],
+  [
+   "20:00",
+   "Cuiabá x Juventude",
+   "Brasileirão B",
+   28,
+   33,
+   39,
+   "CUI",
+   "JUV",
+   "Decide o Bingo. Cuiabá 13º com 4 derrotas seguidas; Juventude 2º sem Messias e Lucas Mineiro."
+  ],
+  [
+   "21:30",
+   "Náutico x CRB",
+   "Brasileirão B",
+   36,
+   30,
+   34,
+   "NAU",
+   "CRB",
+   "CRB 6º briga pelo G6; Náutico 15º."
+  ]
  ],
  "analise": {
   "data": "2026-11-07",
+  "titulo": "Premium da Noite · Série B decide",
+  "resumo": "Tarde quase perfeita: Melzinho verde (+R$ 800) e Bingo com 4 de 5 pernas batidas. O City perdeu em Nottingham e derrubou o Sonho. A noite tem 3 jogos da Série B, todos com G2 ou G6 em jogo.",
   "pontos": [
-   ["PSG x Troyes · 17h05", "Maior chance do dia: PSG vence em ~80%."],
-   ["Mainz x Bayern · 11h30", "Bayern invicto e com o melhor ataque da Bundesliga; vence em ~70%."],
-   ["Atlético-MG x Grêmio · 18h", "Galo precisa de 3 gols de diferença para avançar direto; jogo aberto, mais de 1.5 gols ~74%."]
+   [
+    "Cuiabá x Juventude · 20h",
+    "Perna final do Bingo. Juventude não perde em ~72%: Cuiabá vem de 4 derrotas e pode poupar titulares pela final da Copa FMF. Contra: Juventude nunca venceu na Arena Pantanal (2V Cuiabá, 2E) e joga sem Messias (suspenso) e Lucas Mineiro."
+   ],
+   [
+    "Vila Nova x Criciúma · 20h",
+    "Vila invicto há 6 jogos em casa e com casa cheia; Criciúma precisa vencer e vai se expor. Vila ou empate ~74%."
+   ],
+   [
+    "Náutico x CRB · 21h30",
+    "CRB 6º com 55 pontos e mais 3 times com a mesma pontuação atrás; Náutico 15º sem objetivo. CRB ou empate ~64%."
+   ]
   ],
-  "resumo": "Sábado sem Série A do Brasileirão e com muitos favoritos fortes na Europa. Melzinho só em vitórias dos dois maiores favoritos; Bingo repete o padrão que bateu ontem (X2 de favorito fora) com uma única perna de gols.",
-  "risco": "R$ 1.520 em jogo, 22% da banca (R$ 6.800). PSG e Bayern estão no Melzinho e no Sonho; Real, Arsenal, Roma e Leipzig estão no Bingo e no Sonho. Se o Real tropeçar em Valência, Bingo e Sonho caem juntos.",
-  "titulo": "Sábado dos favoritos"
+  "risco": "Agora em risco: R$ 500 (Bingo R$ 300 + Premium R$ 200), 6,8% da banca parcial de R$ 7.380. O Premium foi montado sem o Juventude para não concentrar dois bilhetes no mesmo jogo. Chances são estimativas do modelo, não garantia."
  },
  "tripla_placar": {
   "tipo": "Tripla de placar exato",
   "pernas": [
-   ["Cuiabá x Juventude · Placar exato: 0x1", "14,9%"],
-   ["Vila Nova x Criciúma · Placar exato: 1x0", "14,7%"],
-   ["Paderborn x Eintracht Frankfurt · Placar exato: 1x1", "13,3%"]
+   [
+    "Cuiabá x Juventude · Placar exato: 0x1",
+    "14,9%"
+   ],
+   [
+    "Vila Nova x Criciúma · Placar exato: 1x0",
+    "14,7%"
+   ],
+   [
+    "Paderborn x Eintracht Frankfurt · Placar exato: 1x1",
+    "13,3%"
+   ]
   ],
   "chance": "0,29% (1 em ~343)",
   "justa": "343",
   "nota": "Só entra com odd 360+. Valor de sonho, fora da banca.",
   "reserva": [
-   ["Cuiabá x Juventude · 1x1", "13,4%"],
-   ["Vila Nova x Criciúma · 1x1", "13,2%"],
-   ["Novorizontino x Fortaleza · 1x1", "12,8%"]
+   [
+    "Cuiabá x Juventude · 1x1",
+    "13,4%"
+   ],
+   [
+    "Vila Nova x Criciúma · 1x1",
+    "13,2%"
+   ],
+   [
+    "Novorizontino x Fortaleza · 1x1",
+    "12,8%"
+   ]
   ],
   "reserva_chance": "0,23% (1 em ~440)"
  }
