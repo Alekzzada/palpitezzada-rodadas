@@ -11,7 +11,7 @@ const REPO = 'Alekzzada/palpitezzada-rodadas';
 const DIR = __dirname;
 const USERS_FILE = path.join(DIR, 'usuarios.json');
 const SECRET_FILE = path.join(DIR, '.segredo');
-const ATUALIZA_MS = 20000; // checa o GitHub a cada 20s
+const ATUALIZA_MS = 15000; // reserva: checa o GitHub a cada 15s (resposta 304 não gasta limite)
 
 // ---------- segredo da sessão ----------
 let SECRET;
@@ -64,21 +64,34 @@ function bloqueado(ip) { const t = tentativas.get(ip); return t && t.n >= 8 && D
 function falhou(ip) { const t = tentativas.get(ip) || { n: 0, t: Date.now() }; t.n++; t.t = Date.now(); tentativas.set(ip, t); }
 
 // ---------- GitHub ao vivo ----------
-function get(url, raw) {
+const TOKEN = process.env.GITHUB_TOKEN || (() => { try { return fs.readFileSync(path.join(DIR, '.github-token'), 'utf8').trim(); } catch (e) { return ''; } })();
+const limite = { restante: null, reseta: null };
+function req(url, accept, etag) {
   return new Promise((ok, erro) => {
-    https.get(url, { headers: { 'User-Agent': 'palpitezzada-site', Accept: raw || 'application/json' } }, r => {
+    const h = { 'User-Agent': 'palpitezzada-site', Accept: accept || 'application/json' };
+    if (etag) h['If-None-Match'] = etag;
+    if (TOKEN && url.startsWith('https://api.github.com')) h.Authorization = 'Bearer ' + TOKEN;
+    https.get(url, { headers: h }, r => {
+      if (r.headers['x-ratelimit-remaining']) { limite.restante = +r.headers['x-ratelimit-remaining']; limite.reseta = new Date(r.headers['x-ratelimit-reset'] * 1000).toISOString(); }
       let b = ''; r.on('data', c => b += c);
-      r.on('end', () => r.statusCode === 200 ? ok(b) : erro(new Error(url + ' ' + r.statusCode)));
+      r.on('end', () => (r.statusCode === 200 || r.statusCode === 304) ? ok({ status: r.statusCode, body: b, etag: r.headers.etag }) : erro(new Error(url.split('?')[0] + ' ' + r.statusCode)));
     }).on('error', erro).setTimeout(10000, function () { this.destroy(new Error('timeout')); });
   });
 }
-const estado = { sha: null, rodada: null, historico: [], atualizado: null, erro: null };
-async function atualizar() {
+const get = (url, accept) => req(url, accept).then(r => r.body);
+const estado = { sha: null, rodada: null, historico: [], atualizado: null, erro: null, carregadoEm: null };
+let etagCommit = null, rodando = null;
+function atualizar() { if (!rodando) rodando = atualizarAgora().finally(() => { rodando = null; }); return rodando; }
+async function atualizarAgora() {
   try {
-    const sha = (await get(`https://api.github.com/repos/${REPO}/commits/main`, 'application/vnd.github.sha')).trim();
+    const r = await req(`https://api.github.com/repos/${REPO}/commits/main`, 'application/vnd.github.sha', estado.sha && !String(estado.sha).startsWith('main-') ? etagCommit : null);
+    if (r.status === 304) { estado.atualizado = new Date().toISOString(); estado.erro = null; return; }
+    etagCommit = r.etag;
+    const sha = r.body.trim();
     if (sha !== estado.sha) {
       const base = `https://raw.githubusercontent.com/${REPO}/${sha}/`;
       const rodada = JSON.parse(await get(base + 'rodada.json'));
+      if (!rodada || !Array.isArray(rodada.entradas)) throw new Error('rodada.json sem entradas');
       let hist = [];
       try {
         const arquivos = JSON.parse(await get(`https://api.github.com/repos/${REPO}/contents/historico?ref=${sha}`))
@@ -86,7 +99,7 @@ async function atualizar() {
         hist = (await Promise.all(arquivos.map(n => get(base + 'historico/' + n).then(JSON.parse).catch(() => null))))
           .filter(Boolean).map(resumoDia);
       } catch (e) { hist = estado.historico; }
-      Object.assign(estado, { sha, rodada, historico: hist });
+      Object.assign(estado, { sha, rodada, historico: hist, carregadoEm: new Date().toISOString() });
       console.log('Rodada nova carregada', sha.slice(0, 7), rodada.gerado);
     }
     estado.atualizado = new Date().toISOString(); estado.erro = null;
@@ -122,13 +135,20 @@ function enviar(res, cod, corpo, tipo, extra) { res.writeHead(cod, Object.assign
 function arquivo(res, nome) { fs.readFile(path.join(PUB, nome), (e, b) => e ? enviar(res, 404, 'Não encontrado') : enviar(res, 200, b, TIPOS[path.extname(nome)] || 'application/octet-stream')); }
 function corpo(req) { return new Promise(ok => { let b = ''; req.on('data', c => { b += c; if (b.length > 1e4) req.destroy(); }); req.on('end', () => ok(b)); }); }
 
+function https_(req) { return req.socket.encrypted || String(req.headers['x-forwarded-proto'] || '').includes('https'); }
+let ultimoPing = 0;
 http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://x');
   const p = url.pathname;
   const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
   const user = lerSessao(req);
 
-  if (p === '/saude') return enviar(res, 200, JSON.stringify({ ok: true, sha: estado.sha, atualizado: estado.atualizado, erro: estado.erro }), 'application/json');
+  if (p === '/saude') return enviar(res, 200, JSON.stringify({ ok: !!estado.rodada, sha: estado.sha, rodada: estado.rodada && estado.rodada.gerado, titulo: estado.rodada && estado.rodada.analise && estado.rodada.analise.titulo, entradas: estado.rodada ? estado.rodada.entradas.length : 0, dias_historico: estado.historico.length, carregada_em: estado.carregadoEm, conferido_em: estado.atualizado, github_limite_restante: limite.restante, usuarios: Object.keys(USERS).length, erro: estado.erro }), 'application/json');
+  if (p === '/atualizar') {
+    // chamado pelo GitHub a cada envio: busca a rodada na hora (no máx. 1 vez a cada 3s)
+    if (Date.now() - ultimoPing > 3000) { ultimoPing = Date.now(); etagCommit = null; await atualizar().catch(() => {}); }
+    return enviar(res, 200, JSON.stringify({ ok: true, sha: estado.sha, rodada: estado.rodada && estado.rodada.gerado }), 'application/json');
+  }
 
   if (p === '/entrar' && req.method === 'POST') {
     if (bloqueado(ip)) return enviar(res, 429, JSON.stringify({ erro: 'Muitas tentativas. Espere 15 minutos.' }), 'application/json');
@@ -136,7 +156,7 @@ http.createServer(async (req, res) => {
     const u = String(d.usuario || '').toLowerCase().trim();
     if (USERS[u] && confere(String(d.senha || ''), USERS[u])) {
       tentativas.delete(ip);
-      return enviar(res, 200, '{"ok":true}', 'application/json', { 'Set-Cookie': `pz=${criarSessao(u)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${30 * 86400}` });
+      return enviar(res, 200, '{"ok":true}', 'application/json', { 'Set-Cookie': `pz=${criarSessao(u)}; Path=/; HttpOnly;${https_(req) ? ' Secure;' : ''} SameSite=Lax; Max-Age=${30 * 86400}` });
     }
     falhou(ip);
     return enviar(res, 401, JSON.stringify({ erro: 'Usuário ou senha incorretos.' }), 'application/json');

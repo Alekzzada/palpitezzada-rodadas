@@ -1,0 +1,17 @@
+name: Avisar o site
+on:
+  push:
+    branches: [main]
+    paths: ['rodada.json', 'historico/**']
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Site busca a rodada na hora
+        run: |
+          for i in 1 2 3; do
+            curl -fsS -m 20 https://palpitezzada.com/atualizar && exit 0
+            sleep 5
+          done
+          echo "Site não respondeu; ele pega sozinho em até 15s."

@@ -61,6 +61,6 @@ function buscar(primeira){
   }).catch(function(){}).then(function(){hora.textContent='ao vivo · '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})});
 }
 buscar(true);
-setInterval(function(){if(!document.hidden)buscar()},15000);
+setInterval(function(){if(!document.hidden)buscar()},8000);
 document.addEventListener('visibilitychange',function(){if(!document.hidden)buscar()});
 })();
