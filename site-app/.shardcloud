@@ -1,0 +1,6 @@
+DISPLAY_NAME=Palpitezzada
+DESCRIPTION=Site fechado do Palpitezzada com a rodada diaria ao vivo do GitHub
+MAIN=index.js
+MEMORY=512
+VERSION=recommended
+SUBDOMAIN=palpitezzada

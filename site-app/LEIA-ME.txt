@@ -1,0 +1,10 @@
+PALPITEZZADA · SITE COM RODADA AO VIVO
+
+1) Abra usuarios.json e troque/adicione os usuários e senhas dos amigos
+   (no primeiro boot o site troca cada senha por um código seguro).
+2) Na ShardCloud: Aplicações > o app do palpitezzada.com > substitua os arquivos
+   por este zip (ou "New app" > enviar o zip e apontar o domínio palpitezzada.com).
+3) Pronto. O site checa o GitHub a cada 20s e a tela de cada amigo a cada 15s.
+   Toda rodada que o Claude enviar aparece sozinha, sem deploy e sem F5.
+
+Teste: palpitezzada.com/saude mostra a última rodada carregada.

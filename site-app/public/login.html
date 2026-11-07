@@ -1,0 +1,12 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Entrar · Palpitezzada</title><link rel="stylesheet" href="/login.css"></head>
+<body><main class="login"><form class="box" id="f">
+<h1>Palpite<span style="color:var(--neon)">zzada</span></h1><p>Grupo fechado. Entre com o usuário e a senha que você recebeu.</p>
+<input name="usuario" placeholder="Usuário" autocomplete="username" required>
+<input name="senha" type="password" placeholder="Senha" autocomplete="current-password" required>
+<button>Entrar</button><div class="erro" id="e"></div></form></main>
+<script>
+document.getElementById('f').onsubmit=async ev=>{ev.preventDefault();const f=new FormData(ev.target),e=document.getElementById('e');e.textContent='';
+const r=await fetch('/entrar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({usuario:f.get('usuario'),senha:f.get('senha')})});
+if(r.ok)location.href='/';else{const d=await r.json().catch(()=>({}));e.textContent=d.erro||'Erro ao entrar.'}};
+</script></body></html>
