@@ -134,7 +134,14 @@ const PUB = path.join(DIR, 'public');
 const TIPOS = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'application/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
 const SEG = { 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'Referrer-Policy': 'same-origin', 'Cache-Control': 'no-store' };
 function enviar(res, cod, corpo, tipo, extra) { res.writeHead(cod, Object.assign({ 'Content-Type': tipo || 'text/plain; charset=utf-8' }, SEG, extra || {})); res.end(corpo); }
-function arquivo(res, nome) { fs.readFile(path.join(PUB, nome), (e, b) => e ? enviar(res, 404, 'Não encontrado') : enviar(res, 200, b, TIPOS[path.extname(nome)] || 'application/octet-stream')); }
+// aceita os arquivos da página dentro de public/ ou soltos na raiz
+function arquivo(res, nome) {
+  const tipo = TIPOS[path.extname(nome)] || 'application/octet-stream';
+  fs.readFile(path.join(PUB, nome), (e, b) => {
+    if (!e) return enviar(res, 200, b, tipo);
+    fs.readFile(path.join(DIR, nome), (e2, b2) => e2 ? enviar(res, 404, 'Não encontrado') : enviar(res, 200, b2, tipo));
+  });
+}
 function corpo(req) { return new Promise(ok => { let b = ''; req.on('data', c => { b += c; if (b.length > 1e4) req.destroy(); }); req.on('end', () => ok(b)); }); }
 
 function https_(req) { return req.socket.encrypted || String(req.headers['x-forwarded-proto'] || '').includes('https'); }
