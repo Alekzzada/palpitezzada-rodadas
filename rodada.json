@@ -1,309 +1,167 @@
 {
- "gerado": "2026-11-06T09:34:27-03:00",
+ "gerado": "2026-11-07T09:40:00-03:00",
+ "banca": {
+  "atual": 6800,
+  "obs": "Banca após 06/11 (+R$ 1.800 oficiais). Se a Odd 30+ de ontem (R$ 500, vermelha) foi jogada, a banca é R$ 6.300."
+ },
+ "ontem": {
+  "data": "2026-11-06",
+  "saldo": 1800,
+  "resumo": "Melzinho e Bingo verdes; Sonho, Tripla e Odd 30+ vermelhos. Funcionou dupla chance de mandante e X2 de favorito fora; falhou cravar vitória do Sevilla e 'Everton sem sofrer gol'."
+ },
  "entradas": [
   {
-   "chance": "61%",
-   "data": "2026-11-06",
-   "justa": "1.64",
-   "nota": "Só entra com odd 1.70 ou mais; se a casa pagar menos, não entre.",
-   "odd": 1.7,
+   "id": "2026-11-07-mel",
+   "chance": "56%",
+   "data": "2026-11-07",
+   "justa": "1.79",
+   "nota": "Só entra com odd 1.80 ou mais. Abaixo disso o bilhete paga menos do que a chance real; não entre.",
+   "odd": 1.8,
    "ordem": 1,
    "pernas": [
     [
-     "Everton x Coventry · Dupla chance: Everton ou empate",
+     "Paris Saint-Germain x Troyes · Resultado final: PSG",
      "80%",
-     "Everton fez 2,0 pts/jogo nos últimos 5 em casa; Coventry sofre 1,8 gol/jogo."
+     "Líder da Ligue 1 (20 pts em 9 jogos) contra o 16º (8 pts), em casa."
     ],
     [
-     "Sevilla x Alavés · Dupla chance: Sevilla ou empate",
-     "76%",
-     "Alavés fez só 0,4 pt/jogo fora nos últimos 5."
+     "Mainz x Bayern · Resultado final: Bayern",
+     "70%",
+     "Bayern invicto (5V 3E), 27 gols marcados e 8 sofridos; Mainz 10º com saldo zero."
     ]
    ],
-   "porque": "Everton e Sevilla jogam em casa contra times de baixo e só perdem em ~1 de cada 5 jogos pelo mercado.",
+   "porque": "Os dois maiores favoritos do sábado, em jogos e horários diferentes (11h30 e 17h05), sem perna de gols.",
    "stake": 1000,
    "status": "pendente",
    "tipo": "Melzinho do Dia",
-   "titulo": "Dupla chance dos mandantes",
-   "id": "2026-11-06-mel"
+   "titulo": "PSG + Bayern vencem"
   },
   {
-   "chance": "19%",
-   "data": "2026-11-06",
-   "justa": "5.20",
-   "nota": "Só entra com odd 5.40 ou mais.",
-   "odd": 5.4,
+   "id": "2026-11-07-bingo",
+   "chance": "13,8%",
+   "data": "2026-11-07",
+   "justa": "7.2",
+   "nota": "Só entra com odd 7.40 ou mais. Acerta ~1 em 7.",
+   "odd": 7.4,
    "ordem": 2,
    "pernas": [
     [
-     "Hamburgo x Gladbach · Dupla chance: Hamburgo ou empate",
-     "67%",
-     "Gladbach com 0,5 pt/jogo na Bundesliga."
+     "Valencia x Real Madrid · Resultado final: Real Madrid",
+     "72%",
+     "Real com 6 vitórias seguidas na liga; Valencia 19º e sem vencer em Mestalla na temporada. Vinícius suspenso."
     ],
     [
-     "Vitória x Fluminense · Dupla chance: empate ou Fluminense",
-     "66%",
-     "Flu 4º com 54 pts contra o 15º."
+     "Arsenal x Hull City · Resultado final: Arsenal",
+     "70%",
+     "Líder da Premier (8V em 9) com 5 gols sofridos; Hull é o 11º."
     ],
     [
-     "Venezia x Udinese · Total de gols: menos de 3.5",
-     "79%",
-     "Venezia sem marcar há 3 jogos."
+     "Roma x Sassuolo · Resultado final: Roma",
+     "65%",
+     "Roma 3º e invicta; Sassuolo vem de 4 derrotas seguidas. Roma sem Dybala, Pellegrini e Svilar."
     ],
     [
-     "Toulouse x Strasbourg · Ambas marcam: Sim",
-     "55%",
-     "Strasbourg teve ambas marcam em 80% dos últimos 10."
+     "Cuiabá x Juventude · Dupla chance: empate ou Juventude",
+     "68%",
+     "Juventude 2º da Série B (só 25 gols sofridos em 36); Cuiabá empatou 14 vezes."
+    ],
+    [
+     "RB Leipzig x Augsburg · Total de gols: mais de 2.5",
+     "62%",
+     "Leipzig com 22 gols em 8 jogos; Augsburg marca e sofre (18:15)."
     ]
    ],
-   "porque": "Duas duplas chances seguram o bilhete; Toulouse x Strasbourg é o jogo com mais gols da rodada.",
+   "porque": "Três favoritos claros + X2 do Juventude (padrão que bateu ontem) + o jogo de mais gols do dia. Uma só perna de gols.",
    "stake": 300,
    "status": "pendente",
    "tipo": "Bingo do Dia",
-   "titulo": "Proteção + gol em Toulouse",
-   "id": "2026-11-06-bingo"
+   "titulo": "Favoritos + X2 Juventude + gols em Leipzig"
   },
   {
-   "chance": "1,4%",
-   "data": "2026-11-06",
-   "justa": "70",
-   "nota": "Perde 98–99 em cada 100. Odd 72 ou mais.",
-   "odd": 72,
+   "id": "2026-11-07-sonho",
+   "chance": "2,0%",
+   "data": "2026-11-07",
+   "justa": "49.5",
+   "nota": "Perde 98 em cada 100. Só entra com odd 51 ou mais.",
+   "odd": 51,
    "ordem": 3,
    "pernas": [
-    [
-     "Everton x Coventry · Resultado final: Everton",
-     "56%",
-     "Maior favorito da sexta."
-    ],
-    [
-     "Sevilla x Alavés · Resultado final: Sevilla",
-     "49%",
-     "Alavés fraco fora."
-    ],
-    [
-     "Toulouse x Strasbourg · Resultado final: Toulouse",
-     "46%",
-     "Leve favorito em casa."
-    ],
-    [
-     "Hamburgo x Gladbach · Resultado final: Hamburgo",
-     "41%",
-     "Gladbach em má fase."
-    ],
-    [
-     "Venezia x Udinese · Resultado final: Venezia",
-     "42%",
-     "Udinese com 1 ponto em 8 jogos."
-    ],
-    [
-     "Vitória x Fluminense · Dupla chance: empate ou Fluminense",
-     "66%",
-     "Flu briga por Libertadores."
-    ]
+    ["Paris Saint-Germain x Troyes · Resultado final: PSG", "80%", "Líder contra o 16º."],
+    ["Valencia x Real Madrid · Resultado final: Real Madrid", "72%", "Valencia sem vencer em casa."],
+    ["Mainz x Bayern · Resultado final: Bayern", "70%", "Bayern invicto."],
+    ["Arsenal x Hull City · Resultado final: Arsenal", "70%", "Líder em casa."],
+    ["Roma x Sassuolo · Resultado final: Roma", "65%", "Sassuolo com 4 derrotas seguidas."],
+    ["Borussia Dortmund x Elversberg · Resultado final: Dortmund", "64%", "BVB invicto, 6 gols sofridos em 8."],
+    ["RB Leipzig x Augsburg · Resultado final: Leipzig", "58%", "4º contra o 11º."],
+    ["Nottingham Forest x Manchester City · Resultado final: City", "57%", "Forest é o 19º, com 6 gols em 9 jogos."],
+    ["Atlético-MG x Grêmio · Resultado final: Atlético-MG", "52%", "Galo precisa vencer (perdeu a ida por 2x0) e vai pressionar desde o início."]
    ],
-   "porque": "Todos os mandantes europeus vencem e o Flu não perde em Salvador.",
+   "porque": "Nove favoritos vencendo no mesmo sábado. Nenhum mandante fraco cravado (erro do Sevilla ontem).",
    "stake": 200,
    "status": "pendente",
    "tipo": "Bilhete dos Sonhos",
-   "titulo": "5 mandantes vencem + Flu não perde",
-   "id": "2026-11-06-sonho"
+   "titulo": "9 favoritos vencem"
   },
   {
-   "chance": "0,24%",
-   "data": "2026-11-06",
-   "justa": "413",
-   "nota": "Só entra com odd 425 ou mais. Valor pequeno, bilhete de sonho.",
-   "odd": 425,
+   "id": "2026-11-07-tripla",
+   "chance": "0,29%",
+   "data": "2026-11-07",
+   "justa": "343",
+   "nota": "Só entra com odd 360 ou mais. Valor pequeno, bilhete de sonho.",
+   "odd": 360,
    "ordem": 4,
    "pernas": [
-    [
-     "Sevilla x Alavés · Placar exato: 1x0",
-     "14,0%",
-     "Alavés marca pouco fora; 1x0 é o placar mais provável."
-    ],
-    [
-     "Vitória x Fluminense · Placar exato: 1x1",
-     "13,3%",
-     "Jogo equilibrado; 1x1 é o placar mais provável."
-    ],
-    [
-     "Venezia x Udinese · Placar exato: 1x1",
-     "13,0%",
-     "Venezia sem marcar há 3 jogos; 1x1 lidera o modelo."
-    ]
+    ["Cuiabá x Juventude · Placar exato: 0x1", "14,9%", "Cuiabá marca pouco (33 em 36); Juventude sofre pouco."],
+    ["Vila Nova x Criciúma · Placar exato: 1x0", "14,7%", "Confronto direto do G-4; Criciúma tem só 38 gols em 36 jogos."],
+    ["Paderborn x Eintracht Frankfurt · Placar exato: 1x1", "13,3%", "Paderborn tem só 6 gols marcados e 9 sofridos em 8 jogos."]
    ],
-   "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 410.",
+   "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 343.",
    "stake": 20,
    "status": "pendente",
    "tipo": "Bilhete Placar Exato",
-   "titulo": "Tripla de placar exato",
-   "id": "2026-11-06-tripla"
-  },
-  {
-   "chance": "3,5%",
-   "data": "2026-11-06",
-   "justa": "28.6",
-   "nota": "Só entra com odd 30 ou mais. Acerta ~1 em 29. Valor de sonho, fora do Melzinho e do Bingo.",
-   "odd": 30,
-   "ordem": 5,
-   "pernas": [
-    [
-     "Everton x Coventry · Everton vence sem sofrer gol",
-     "30,5%",
-     "Coventry sofre muito fora e marca pouco; 1x0 e 2x0 estão entre os placares mais prováveis."
-    ],
-    [
-     "Operário-PR x Sport · Total de gols: menos de 2.5",
-     "60,9%",
-     "Confronto direto de reta final da Série B; nenhum dos dois pode perder."
-    ],
-    [
-     "Vitória x Fluminense · Fluminense vence e ambas marcam",
-     "18,9%",
-     "Flu sem Ignácio, Millán e Martinelli; Vitória em casa e pressionado deve marcar."
-    ]
-   ],
-   "porque": "Uma perna em cada jogo, sem repetir mercado de gols; odd 30 com a maior chance possível na rodada.",
-   "stake": 500,
-   "status": "pendente",
-   "tipo": "Múltipla Odd 30+",
-   "titulo": "Everton sem sofrer + Série B travada + Flu vence com gols",
-   "id": "2026-11-06-odd30"
+   "titulo": "Tripla de placar exato"
   }
  ],
  "jogos": [
-  [
-   "16:30",
-   "Hamburgo x Gladbach",
-   "Bundesliga",
-   41,
-   26,
-   33,
-   "HSV",
-   "BMG",
-   "Jogo mais aberto da noite; ambas marcam ~55%."
-  ],
-  [
-   "16:45",
-   "Venezia x Udinese",
-   "Serie A",
-   42,
-   28,
-   30,
-   "VEN",
-   "UDI",
-   "Venezia sem vencer e pressionado; jogo travado e faltoso."
-  ],
-  [
-   "16:45",
-   "Toulouse x Strasbourg",
-   "Ligue 1",
-   46,
-   25,
-   29,
-   "TFC",
-   "RCS",
-   "Toulouse leve favorito em casa."
-  ],
-  [
-   "17:00",
-   "Everton x Coventry",
-   "Premier League",
-   56,
-   24,
-   20,
-   "EVE",
-   "COV",
-   "Maior favorito da sexta, em casa contra o 17º."
-  ],
-  [
-   "17:00",
-   "Sevilla x Alavés",
-   "LaLiga",
-   49,
-   27,
-   24,
-   "SEV",
-   "ALA",
-   "Alavés é o time mais faltoso; +3.5 cartões ~73%."
-  ],
-  [
-   "19:30",
-   "Operário-PR x Sport",
-   "Brasileirão B",
-   39,
-   29,
-   32,
-   "OPE",
-   "SPT",
-   "Confronto direto pelo G-6 (51 x 55 pts); menos de 2,5 gols ~61%."
-  ],
-  [
-   "20:00",
-   "Vitória x Fluminense",
-   "Brasileirão A",
-   34,
-   29,
-   37,
-   "VIT",
-   "FLU",
-   "Vitória 15º (38 pts) contra Flu 4º (54 pts); +3.5 cartões ~76%."
-  ]
+  ["11:30", "Mainz x Bayern", "Bundesliga", 13, 17, 70, "M05", "FCB", "Bayern 1º invicto (27:8); Mainz 10º."],
+  ["11:30", "Dortmund x Elversberg", "Bundesliga", 64, 20, 16, "BVB", "SVE", "BVB 2º invicto, defesa de 6 gols sofridos."],
+  ["11:30", "RB Leipzig x Augsburg", "Bundesliga", 58, 22, 20, "RBL", "FCA", "Jogo de mais gols do dia; +2.5 ~62%."],
+  ["12:00", "Arsenal x Hull City", "Premier League", 70, 19, 11, "ARS", "HUL", "Líder (24 pts) contra o 11º."],
+  ["14:30", "Nottingham Forest x Manchester City", "Premier League", 20, 23, 57, "NFO", "MCI", "Forest 19º; City 2º com 20 gols."],
+  ["16:10", "Novorizontino x Fortaleza", "Brasileirão B", 47, 28, 25, "NOV", "FOR", "Líder (67) x 5º (62); Fortaleza só perdeu 6 vezes."],
+  ["16:45", "Roma x Sassuolo", "Serie A", 65, 21, 14, "ROM", "SAS", "Roma 3ª invicta; Sassuolo 4 derrotas seguidas."],
+  ["17:00", "Valencia x Real Madrid", "LaLiga", 11, 17, 72, "VAL", "RMA", "Valencia 19º, sem vitória em casa; Real sem Vini."],
+  ["17:05", "PSG x Troyes", "Ligue 1", 80, 13, 7, "PSG", "TRO", "Maior favorito do sábado."],
+  ["18:00", "Atlético-MG x Grêmio", "Copa do Brasil", 52, 27, 21, "CAM", "GRE", "Volta da semi; Grêmio venceu a ida por 2x0."],
+  ["20:00", "Vila Nova x Criciúma", "Brasileirão B", 42, 31, 27, "VIL", "CRI", "3º x 4º pelo acesso; menos de 2.5 ~60%."],
+  ["20:00", "Cuiabá x Juventude", "Brasileirão B", 32, 33, 35, "CUI", "JUV", "Juventude 2º; menos de 2.5 ~64%."]
  ],
  "analise": {
-  "data": "2026-11-06",
+  "data": "2026-11-07",
   "pontos": [
-   [
-    "Everton x Coventry · 17h",
-    "Everton não perde em 80%; Coventry sofre 1,8 gol/jogo."
-   ],
-   [
-    "Vitória x Fluminense · 20h",
-    "Flu não perde em 66%; placar mais provável 1x1 (13%)."
-   ],
-   [
-    "Toulouse x Strasbourg · 16h45",
-    "Jogo de mais gols da sexta: ambas marcam 55%, Strasbourg 80% nos últimos 10."
-   ]
+   ["PSG x Troyes · 17h05", "Maior chance do dia: PSG vence em ~80%."],
+   ["Mainz x Bayern · 11h30", "Bayern invicto e com o melhor ataque da Bundesliga; vence em ~70%."],
+   ["Atlético-MG x Grêmio · 18h", "Galo precisa de 3 gols de diferença para avançar direto; jogo aberto, mais de 1.5 gols ~74%."]
   ],
-  "resumo": "Outra leitura da rodada: em vez de cartões, proteger favoritos com dupla chance, que tem as maiores probabilidades do dia (63% a 80%).",
-  "risco": "R$ 2.020 em jogo, 40% da banca (R$ 5.000), com a Múltipla Odd 30+ de R$ 500. Everton está no Melzinho, no Sonho e na Odd 30+; Vitória x Flu aparece no Bingo, no Sonho, na tripla de placar e na Odd 30+. Se o Everton tropeçar, quatro entradas caem juntas.",
-  "titulo": "Sexta de dupla chance"
+  "resumo": "Sábado sem Série A do Brasileirão e com muitos favoritos fortes na Europa. Melzinho só em vitórias dos dois maiores favoritos; Bingo repete o padrão que bateu ontem (X2 de favorito fora) com uma única perna de gols.",
+  "risco": "R$ 1.520 em jogo, 22% da banca (R$ 6.800). PSG e Bayern estão no Melzinho e no Sonho; Real, Arsenal, Roma e Leipzig estão no Bingo e no Sonho. Se o Real tropeçar em Valência, Bingo e Sonho caem juntos.",
+  "titulo": "Sábado dos favoritos"
  },
  "tripla_placar": {
   "tipo": "Tripla de placar exato",
   "pernas": [
-   [
-    "Sevilla x Alavés · Placar exato: 1x0",
-    "14,0%"
-   ],
-   [
-    "Vitória x Fluminense · Placar exato: 1x1",
-    "13,3%"
-   ],
-   [
-    "Venezia x Udinese · Placar exato: 1x1",
-    "13,0%"
-   ]
+   ["Cuiabá x Juventude · Placar exato: 0x1", "14,9%"],
+   ["Vila Nova x Criciúma · Placar exato: 1x0", "14,7%"],
+   ["Paderborn x Eintracht Frankfurt · Placar exato: 1x1", "13,3%"]
   ],
-  "chance": "0,24% (1 em ~410)",
-  "justa": "413",
-  "nota": "Só entra com odd 425+. Valor de sonho, fora da banca.",
+  "chance": "0,29% (1 em ~343)",
+  "justa": "343",
+  "nota": "Só entra com odd 360+. Valor de sonho, fora da banca.",
   "reserva": [
-   [
-    "Everton x Coventry · 1x0",
-    "12,4%"
-   ],
-   [
-    "Hamburgo x Gladbach · 1x1",
-    "12,5%"
-   ],
-   [
-    "Toulouse x Strasbourg · 1x1",
-    "11,9%"
-   ]
+   ["Cuiabá x Juventude · 1x1", "13,4%"],
+   ["Vila Nova x Criciúma · 1x1", "13,2%"],
+   ["Novorizontino x Fortaleza · 1x1", "12,8%"]
   ],
-  "reserva_chance": "0,18% (1 em ~540)"
+  "reserva_chance": "0,23% (1 em ~440)"
  }
 }

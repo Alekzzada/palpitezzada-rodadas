@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-06T09:18:22-03:00",
+ "gerado": "2026-11-06T09:34:27-03:00",
  "entradas": [
   {
    "chance": "61%",
@@ -22,9 +22,12 @@
    ],
    "porque": "Everton e Sevilla jogam em casa contra times de baixo e só perdem em ~1 de cada 5 jogos pelo mercado.",
    "stake": 1000,
-   "status": "pendente",
+   "status": "green",
    "tipo": "Melzinho do Dia",
-   "titulo": "Dupla chance dos mandantes"
+   "titulo": "Dupla chance dos mandantes",
+   "id": "2026-11-06-mel",
+   "resultado": "Everton 3x1 Coventry · Sevilla 0x0 Alavés",
+   "lucro": 700
   },
   {
    "chance": "19%",
@@ -57,9 +60,12 @@
    ],
    "porque": "Duas duplas chances seguram o bilhete; Toulouse x Strasbourg é o jogo com mais gols da rodada.",
    "stake": 300,
-   "status": "pendente",
+   "status": "green",
    "tipo": "Bingo do Dia",
-   "titulo": "Proteção + gol em Toulouse"
+   "titulo": "Proteção + gol em Toulouse",
+   "id": "2026-11-06-bingo",
+   "resultado": "HSV 3x1 BMG · Vitória 0x3 Flu · Venezia 2x1 Udinese · Toulouse 3x1 Strasbourg",
+   "lucro": 1320
   },
   {
    "chance": "1,4%",
@@ -102,9 +108,12 @@
    ],
    "porque": "Todos os mandantes europeus vencem e o Flu não perde em Salvador.",
    "stake": 200,
-   "status": "pendente",
+   "status": "red",
    "tipo": "Bilhete dos Sonhos",
-   "titulo": "5 mandantes vencem + Flu não perde"
+   "titulo": "5 mandantes vencem + Flu não perde",
+   "id": "2026-11-06-sonho",
+   "resultado": "Sevilla só empatou (0x0)",
+   "lucro": -200
   },
   {
    "chance": "0,24%",
@@ -132,9 +141,12 @@
    ],
    "porque": "Os placares mais prováveis de 3 jogos travados; juntos saem ~1 vez em 410.",
    "stake": 20,
-   "status": "pendente",
+   "status": "red",
    "tipo": "Bilhete Placar Exato",
-   "titulo": "Tripla de placar exato"
+   "titulo": "Tripla de placar exato",
+   "id": "2026-11-06-tripla",
+   "resultado": "Sevilla 0x0, Vitória 0x3, Venezia 2x1",
+   "lucro": -20
   },
   {
    "chance": "3,5%",
@@ -162,10 +174,12 @@
    ],
    "porque": "Uma perna em cada jogo, sem repetir mercado de gols; odd 30 com a maior chance possível na rodada.",
    "stake": 500,
-   "status": "pendente",
+   "status": "red",
    "tipo": "Múltipla Odd 30+",
    "titulo": "Everton sem sofrer + Série B travada + Flu vence com gols",
-   "id": "2026-11-06-odd30"
+   "id": "2026-11-06-odd30",
+   "resultado": "Everton sofreu gol (3x1)",
+   "lucro": -500
   }
  ],
  "jogos": [
@@ -301,5 +315,10 @@
    ]
   ],
   "reserva_chance": "0,18% (1 em ~540)"
+ },
+ "fechamento": {
+  "saldo_oficial": 1800,
+  "banca_apos": 6800,
+  "obs": "Saldo oficial com Melzinho, Bingo, Sonho e Tripla (R$ 1.520). A Odd 30+ (R$ 500) caiu; se foi jogada, banca fica em R$ 6.300."
  }
 }
