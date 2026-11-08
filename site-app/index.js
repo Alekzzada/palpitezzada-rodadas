@@ -40,14 +40,14 @@ function carregarUsuarios() {
   if (mudou) { try { fs.writeFileSync(USERS_FILE, JSON.stringify(lista, null, 2)); } catch (e) {} }
   USERS = {};
   for (const u of lista) if (u.usuario && u.hash) USERS[String(u.usuario).toLowerCase()] = u.hash;
-  console.log('Usuários carregados:', Object.keys(USERS).length);
+  console.log('Node', process.version, '· usuários carregados:', Object.keys(USERS).length);
 }
 carregarUsuarios();
 
 // ---------- sessão em cookie assinado (30 dias) ----------
 function assinar(v) { return crypto.createHmac('sha256', SECRET).update(v).digest('hex'); }
 function criarSessao(user) {
-  const v = Buffer.from(JSON.stringify({ u: user, e: Date.now() + 30 * 864e5 })).toString('base64url');
+  const v = Buffer.from(JSON.stringify({ u: user, e: Date.now() + 30 * 864e5 })).toString('hex');
   return v + '.' + assinar(v);
 }
 function lerSessao(req) {
@@ -57,7 +57,7 @@ function lerSessao(req) {
   if (!v || !s || s.length !== 64) return null;
   const esperado = assinar(v);
   if (!crypto.timingSafeEqual(Buffer.from(s), Buffer.from(esperado))) return null;
-  try { const d = JSON.parse(Buffer.from(v, 'base64url').toString()); return d.e > Date.now() && USERS[d.u] ? d.u : null; } catch (e) { return null; }
+  try { const d = JSON.parse(Buffer.from(v, 'hex').toString()); return d.e > Date.now() && USERS[d.u] ? d.u : null; } catch (e) { return null; }
 }
 
 // ---------- trava contra força bruta no login ----------
@@ -146,7 +146,14 @@ function corpo(req) { return new Promise(ok => { let b = ''; req.on('data', c =>
 
 function https_(req) { return req.socket.encrypted || String(req.headers['x-forwarded-proto'] || '').includes('https'); }
 let ultimoPing = 0;
-http.createServer((req, res) => { rota(req, res).catch(e => { console.error('Rota:', e && e.message); try { enviar(res, 500, 'Erro interno'); } catch (x) {} }); }).listen(PORT, '0.0.0.0', () => console.log('Palpitezzada no ar em 0.0.0.0:' + PORT));
+function handler(req, res) { rota(req, res).catch(e => { console.error('Rota:', e && e.message); try { enviar(res, 500, 'Erro interno'); } catch (x) {} }); }
+function ouvir(porta) {
+  const srv = http.createServer(handler);
+  srv.on('error', e => console.error('Não consegui abrir a porta ' + porta + ':', e.code || e.message));
+  srv.listen(porta, '0.0.0.0', () => console.log('Palpitezzada no ar em 0.0.0.0:' + porta));
+}
+ouvir(PORT);
+if (process.env.PORT && +process.env.PORT !== PORT) ouvir(+process.env.PORT);
 
 async function rota(req, res) {
   const url = new URL(req.url, 'http://x');
